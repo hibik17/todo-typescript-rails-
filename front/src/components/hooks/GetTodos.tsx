@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { TodoType } from "../Types/TodoType";
 
 export const GetTodos = () => {

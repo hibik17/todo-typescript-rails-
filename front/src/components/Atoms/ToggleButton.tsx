@@ -14,8 +14,6 @@ export const ToggleButton = () => {
     }
   }, [toggle]);
 
-  console.log(status);
-
   return (
     <>
       <div className="flex flex-col h-10 justify-center items-center ">
