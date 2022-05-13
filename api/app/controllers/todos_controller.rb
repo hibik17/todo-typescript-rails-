@@ -4,7 +4,6 @@ class TodosController < ApplicationController
   # GET /todos
   def index
     @todos = Todo.all
-
     render json: @todos
   end
 
@@ -16,7 +15,6 @@ class TodosController < ApplicationController
   # POST /todos
   def create
     @todo = Todo.new(todo_params)
-
     if @todo.save
       render json: @todo, status: :created, location: @todo
     else

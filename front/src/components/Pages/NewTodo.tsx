@@ -1,12 +1,9 @@
-import React from "react";
-import { NewTodoTitle } from "../Atoms/NewTodoTitle";
-import { Form } from "../Templates/Form";
+import { Card } from "../Molecules/Card";
 
 export const NewTodo = () => {
   return (
-    <>
-      <NewTodoTitle />
-      <Form />
-    </>
+    <div className="h-screen w-full flex justify-center items-center">
+      <Card />
+    </div>
   );
 };
