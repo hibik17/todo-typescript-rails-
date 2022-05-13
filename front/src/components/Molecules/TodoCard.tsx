@@ -1,4 +1,5 @@
 import React from "react";
+import { ToggleButton } from "../Atoms/ToggleButton";
 
 export const TodoCard = () => {
   return (
@@ -11,10 +12,7 @@ export const TodoCard = () => {
           nihil.
         </p>
       </div>
-      <div className="w-full  flex flex-end">
-        <p>finished?</p>
-        <input className="" type="checkbox" />
-      </div>
+      <ToggleButton />
     </div>
   );
 };

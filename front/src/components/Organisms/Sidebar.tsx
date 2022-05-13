@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Sidebar = () => {
+  // 画面遷移を行う
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col justify-between mt-6">
       <aside>
@@ -8,7 +12,7 @@ export const Sidebar = () => {
           <li>
             <button
               className="flex w-full items-center px-4 py-2 text-gray-700 hover:bg-gray-300"
-              onClick={() => console.log("移動します")}
+              onClick={() => navigate("/todos")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +36,7 @@ export const Sidebar = () => {
           <li>
             <button
               className="flex w-full items-center px-4 py-2 mt-5 text-gray-600 rounded-md hover:bg-gray-300"
-              onClick={() => console.log("移動します")}
+              onClick={() => navigate("/newtodo")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
