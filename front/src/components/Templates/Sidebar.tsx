@@ -7,8 +7,7 @@ import {
   AiFillFire,
   AiOutlineFileDone,
 } from "react-icons/ai";
-
-import { SidebarLink } from "../hooks/SidebarLink";
+import { SidebarLink } from "./SidebarLink";
 
 const sidebarArray = [
   // all task page
@@ -25,7 +24,7 @@ const sidebarArray = [
   },
   // today's task page
   {
-    path: "/today_todo",
+    path: "/uncompleted_todo",
     icon: <AiFillFire className="w-6 h-6" />,
     linkName: "Today's Task",
   },
@@ -39,7 +38,7 @@ const sidebarArray = [
 
 export const Sidebar = () => {
   return (
-    <div className="flex flex-col justify-between mt-6">
+    <div className="flex flex-col justify-between ">
       <aside>
         <ul>
           {sidebarArray.map((sideItem, index) => (

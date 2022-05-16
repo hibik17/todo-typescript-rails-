@@ -16,7 +16,7 @@ export const SidebarLink: FC<SideBarItem> = memo((props) => {
   return (
     <li>
       <button
-        className="flex w-full items-center px-4 py-2 text-gray-700 hover:bg-gray-300"
+        className="flex w-full items-center px-4 py-2 text-gray-700 hover:bg-gray-300 mt-10"
         onClick={() => navigate(path)}
       >
         {icon}

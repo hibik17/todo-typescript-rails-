@@ -9,7 +9,7 @@ import { Todos } from "./components/Pages/Todos";
 
 const routes = [
   { path: "/newtodo", element: <NewTodo /> },
-  { path: "/today_todo", element: <TodayTask /> },
+  { path: "/uncompleted_todo", element: <TodayTask /> },
   { path: "/completed_todo", element: <CompletedTask /> },
   { path: "/document", element: <Document /> },
   { path: "/todos", element: <Todos /> },

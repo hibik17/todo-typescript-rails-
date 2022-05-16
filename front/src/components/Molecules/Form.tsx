@@ -25,7 +25,7 @@ export const Form = () => {
       })
       .catch((error) => console.log(error.status))
       .finally(() => {
-        navigate("/today_todo");
+        navigate("/uncompleted_todo");
       });
   };
 

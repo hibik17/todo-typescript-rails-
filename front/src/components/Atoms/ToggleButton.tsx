@@ -1,26 +1,32 @@
-import { useState } from "react";
+import { FC } from "react";
 import { Switch } from "@headlessui/react";
+import { UpdateStatus } from "../hooks/UpdateStatus";
 
-export const ToggleButton = () => {
-  const [enabled, setEnabled] = useState(false);
+type Props = {
+  id: number;
+  is_completed: boolean;
+};
+
+export const ToggleButton: FC<Props> = (props: Props) => {
+  const { id, is_completed } = props;
+  const { ToggleUpdate } = UpdateStatus();
 
   const toggleAction = () => {
-    setEnabled(!enabled);
-    console.log("Toggle was pressed");
+    ToggleUpdate(id);
   };
 
   return (
     <Switch
-      checked={enabled}
+      checked={is_completed}
       onChange={toggleAction}
       className={`${
-        enabled ? "bg-teal-300" : "bg-red-400"
+        is_completed ? "bg-teal-300" : "bg-red-400"
       } relative inline-flex h-6 w-11 items-center rounded-full mx-32`}
     >
       <span className="sr-only">Enable notifications</span>
       <span
         className={`${
-          enabled ? "translate-x-6" : "translate-x-1"
+          is_completed ? "translate-x-6" : "translate-x-1"
         } inline-block h-4 w-4 transform rounded-full bg-white`}
       />
     </Switch>
