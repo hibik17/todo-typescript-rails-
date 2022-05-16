@@ -1,12 +1,11 @@
-import { memo, FC, useEffect } from "react";
-
+import React, { useEffect } from "react";
 import { GetTodos } from "../hooks/GetTodos";
 import { TodoCard } from "../Molecules/TodoCard";
 import { Header } from "../Templates/Header";
 
 import { Sidebar } from "../Templates/Sidebar";
 
-export const Todos: FC = memo(() => {
+export const CompletedTask = () => {
   const { getData, todos } = GetTodos();
 
   useEffect(() => {
@@ -30,4 +29,4 @@ export const Todos: FC = memo(() => {
       </div>
     </div>
   );
-});
+};

@@ -15,7 +15,7 @@ export const Sidebar = () => {
     // new task page
     ["/newtodo", <AiOutlinePlusSquare className="w-6 h-6" />, "New Task"],
     // today's task page
-    ["/today_todo", <AiFillFire className="w-6 h-6" />, "Today Task"],
+    ["/today_todo", <AiFillFire className="w-6 h-6" />, "Today's Task"],
     // completed task page
     ["/completed_todo", <AiFillFire className="w-6 h-6" />, "completed task"],
   ];

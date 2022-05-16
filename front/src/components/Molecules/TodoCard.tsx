@@ -4,7 +4,7 @@ import { ToggleButton } from "../Atoms/ToggleButton";
 export const TodoCard = () => {
   return (
     <div
-      className="min-w-sm max-w-sm bg-gradient-to-r from-rose-100 to-teal-100
+      className="min-w-sm max-w-sm bg-gradient-to-r from-rose-100 to-teal-100 animate-in slide-in-from-bottom
     rounded overflow-hidden shadow-lg m-3 hover:-translate-y-1 hover:scale-110 hover:bg-teal-100 duration-300"
     >
       <div className="px-6 py-4">
