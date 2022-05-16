@@ -15,35 +15,35 @@ Todo.create(
 Todo.create(
   title: 'Star Wars',
   body: 'Star Wars',
-  is_completed: true,
+  is_completed: false,
 )
 
 Todo.create(
   title: 'Star Wars',
   body: 'Star Wars',
-  is_completed: true,
+  is_completed: false,
 )
 
 Todo.create(
   title: 'Star Wars',
   body: 'Star Wars',
-  is_completed: true,
+  is_completed: false,
 )
 
 Todo.create(
   title: 'Star Wars',
   body: 'Star Wars',
-  is_completed: true,
+  is_completed: false,
 )
 
 Todo.create(
   title: 'Star Wars',
   body: 'Star Wars',
-  is_completed: true,
+  is_completed: false,
 )
 
 Todo.create(
   title: 'Star Wars',
   body: 'Star Wars',
-  is_completed: true,
+  is_completed: false,
 )
