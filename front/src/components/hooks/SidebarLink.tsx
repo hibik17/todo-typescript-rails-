@@ -1,14 +1,9 @@
 import React, { FC, memo } from "react";
 import { AiOutlineLeftSquare } from "react-icons/ai";
 import { useNavigate, useLocation } from "react-router-dom";
+import { SideBarItem } from "../Types/SideBarItem";
 
-type sideItem = {
-  path: string;
-  icon: JSX.Element;
-  linkName: string;
-};
-
-export const SidebarLink: FC<sideItem> = memo((props) => {
+export const SidebarLink: FC<SideBarItem> = memo((props) => {
   const { path, icon, linkName } = props;
 
   const navigate = useNavigate();
