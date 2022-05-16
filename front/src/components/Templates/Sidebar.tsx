@@ -1,10 +1,11 @@
-import React, { useCallback, useEffect } from "react";
+import React from "react";
 
 // icon import from react-icon
 import {
   AiOutlineCarryOut,
   AiOutlinePlusSquare,
   AiFillFire,
+  AiOutlineFileDone,
 } from "react-icons/ai";
 import { SidebarLink } from "../hooks/SidebarLink";
 
@@ -17,7 +18,11 @@ export const Sidebar = () => {
     // today's task page
     ["/today_todo", <AiFillFire className="w-6 h-6" />, "Today's Task"],
     // completed task page
-    ["/completed_todo", <AiFillFire className="w-6 h-6" />, "completed task"],
+    [
+      "/completed_todo",
+      <AiOutlineFileDone className="w-6 h-6" />,
+      "completed task",
+    ],
   ];
 
   return (

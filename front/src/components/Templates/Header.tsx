@@ -1,13 +1,20 @@
 import React from "react";
 import { BiRefresh, BiAlarmAdd } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
+  // useNavigation の展開
+  const navigate = useNavigate();
+
   return (
     <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-      <div className="flex items-center flex-shrink-0 text-white mr-6">
+      <button
+        className="flex items-center flex-shrink-0 text-white mr-6"
+        onClick={() => navigate("/todos")}
+      >
         <BiAlarmAdd className="w-10 h-10" />
         <span className="font-semibold text-xl tracking-tight">Tasky</span>
-      </div>
+      </button>
       {/* <div className="block lg:hidden">
         <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
           <svg
