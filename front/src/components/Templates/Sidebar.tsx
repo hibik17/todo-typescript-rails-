@@ -7,33 +7,46 @@ import {
   AiFillFire,
   AiOutlineFileDone,
 } from "react-icons/ai";
+
 import { SidebarLink } from "../hooks/SidebarLink";
 
-export const Sidebar = () => {
-  const sidebarArray = [
-    // all task page
-    ["/todos", <AiOutlineCarryOut className="w-6 h-6" />, "ALL task"],
-    // new task page
-    ["/newtodo", <AiOutlinePlusSquare className="w-6 h-6" />, "New Task"],
-    // today's task page
-    ["/today_todo", <AiFillFire className="w-6 h-6" />, "Today's Task"],
-    // completed task page
-    [
-      "/completed_todo",
-      <AiOutlineFileDone className="w-6 h-6" />,
-      "completed task",
-    ],
-  ];
+const sidebarArray = [
+  // all task page
+  {
+    path: "/todos",
+    icon: <AiOutlineCarryOut className="w-6 h-6" />,
+    linkName: "ALL task",
+  },
+  // new task page
+  {
+    path: "/newtodo",
+    icon: <AiOutlinePlusSquare className="w-6 h-6" />,
+    linkName: "New Task",
+  },
+  // today's task page
+  {
+    path: "/today_todo",
+    icon: <AiFillFire className="w-6 h-6" />,
+    linkName: "Today's Task",
+  },
+  // completed task page
+  {
+    path: "/completed_todo",
+    icon: <AiOutlineFileDone className="w-6 h-6" />,
+    linkName: "completed task",
+  },
+];
 
+export const Sidebar = () => {
   return (
     <div className="flex flex-col justify-between mt-6">
       <aside>
         <ul>
           {sidebarArray.map((sideItem, index) => (
             <SidebarLink
-              linkPath={sideItem[0]}
-              linkIcon={sideItem[1]}
-              linkText={sideItem[2]}
+              path={sideItem.path}
+              icon={sideItem.icon}
+              linkName={sideItem.linkName}
               key={index}
             />
           ))}

@@ -2,14 +2,14 @@ import React, { FC, memo } from "react";
 import { AiOutlineLeftSquare } from "react-icons/ai";
 import { useNavigate, useLocation } from "react-router-dom";
 
-type Props = {
-  linkText?: any;
-  linkPath?: any;
-  linkIcon?: any;
+type sideItem = {
+  path: string;
+  icon: JSX.Element;
+  linkName: string;
 };
 
-export const SidebarLink: FC<Props> = memo((props) => {
-  const { linkText, linkPath, linkIcon } = props;
+export const SidebarLink: FC<sideItem> = memo((props) => {
+  const { path, icon, linkName } = props;
 
   const navigate = useNavigate();
 
@@ -22,11 +22,11 @@ export const SidebarLink: FC<Props> = memo((props) => {
     <li>
       <button
         className="flex w-full items-center px-4 py-2 text-gray-700 hover:bg-gray-300"
-        onClick={() => navigate(linkPath)}
+        onClick={() => navigate(path)}
       >
-        {linkIcon}
-        <span className="mx-4 font-medium">{linkText}</span>
-        {Current_location() === linkPath && (
+        {icon}
+        <span className="mx-4 font-medium">{linkName}</span>
+        {Current_location() === path && (
           <AiOutlineLeftSquare className="w-6 h-6 ml-auto text-red-400" />
         )}
       </button>
