@@ -23,7 +23,7 @@ export const Todos: FC = memo(() => {
         <div className="w-4/5 mt-10">
           <div className="container md:mx-36 lg:flex lg:flex-wrap">
             {todos?.map((todo, index) => {
-              return <TodoCard key={index} />;
+              return <TodoCard key={index} todo={todo} />;
             })}
           </div>
         </div>

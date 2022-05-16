@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 type Inputs = {
   title: string;
@@ -7,6 +8,8 @@ type Inputs = {
 };
 
 export const Form = () => {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -22,7 +25,7 @@ export const Form = () => {
       })
       .catch((error) => console.log(error.status))
       .finally(() => {
-        console.log("post処理終了");
+        navigate("/today_todo");
       });
   };
 

@@ -16,7 +16,7 @@ export const ToggleButton = () => {
 
   return (
     <>
-      <div className="flex flex-col h-10 justify-center items-center ">
+      <div className="flex flex-col h-10 justify-center items-center">
         {/*   Switch Container */}
 
         <div

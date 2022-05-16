@@ -22,7 +22,7 @@ export const TodayTask = () => {
         <div className="md:w-4/5 mt-10">
           <div className="container sm:items-center md:mx-36 lg:flex lg:flex-wrap">
             {todos?.map((todo, index) => {
-              return <TodoCard key={index} />;
+              return <TodoCard key={index} todo={todo} />;
             })}
           </div>
         </div>
