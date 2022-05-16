@@ -1,4 +1,3 @@
-import React from "react";
 import { BiRefresh, BiAlarmAdd } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 

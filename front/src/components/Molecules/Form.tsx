@@ -1,39 +1,24 @@
-import axios from "axios";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-
-type Inputs = {
-  title: string;
-  body: string;
-};
+import { CreateTodo } from "../hooks/CreateTodo";
+import { CreateTodoType } from "../Types/CreateTodoType";
 
 export const Form = () => {
-  const navigate = useNavigate();
-
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<Inputs>();
+  } = useForm<CreateTodoType>();
+
+  // import create action hooks
+  const { FuncCreateTodo } = CreateTodo();
 
   // onSubmit action define
-  const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    await axios
-      .post("http://localhost:4000/todos", {
-        title: data.title,
-        body: data.body,
-      })
-      .catch((error) => console.log(error.status))
-      .finally(() => {
-        navigate("/uncompleted_todo");
-      });
+  const onSubmit: SubmitHandler<CreateTodoType> = async (data) => {
+    FuncCreateTodo(data);
   };
 
   return (
     <form className="w-full mt-16">
-      <div>
-        {errors.body && <span className="text-red-400">body is required</span>}
-      </div>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
           <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
