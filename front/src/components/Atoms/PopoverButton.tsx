@@ -1,17 +1,16 @@
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { AiOutlineFileDone } from "react-icons/ai";
-
-function classNames(...classes: string[]): string {
-  return classes.filter(Boolean).join(" ");
-}
+import { DeleteButton } from "./DeleteButton";
+import { ToggleButton } from "./ToggleButton";
+import { EditModal } from "../Pages/EditModal";
 
 export const PopoverButton = () => {
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu as="div">
       <div>
-        <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none ">
-          <AiOutlineFileDone className="h-5 w-5" aria-hidden="true" />
+        <Menu.Button className="pl-auto mx-6 hover:text-red-300">
+          <AiOutlineFileDone className="h-6 w-6" aria-hidden="true" />
         </Menu.Button>
       </div>
 
@@ -24,62 +23,19 @@ export const PopoverButton = () => {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className="py-1">
+        <Menu.Items className="origin-top-right absolute right--20 w-60 rounded-md shadow-lg bg-white">
+          <div>
             <Menu.Item>
-              {(active: { active: boolean }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
-                  )}
-                >
-                  Account settings
-                </a>
-              )}
+              <div>
+                <DeleteButton id={2} />
+              </div>
             </Menu.Item>
             <Menu.Item>
-              {(active: { active: any }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
-                  )}
-                >
-                  Support
-                </a>
-              )}
+              <ToggleButton id={2} is_completed={true} />
             </Menu.Item>
             <Menu.Item>
-              {(active: { active: any }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
-                  )}
-                >
-                  License
-                </a>
-              )}
+              <EditModal />
             </Menu.Item>
-            <form method="POST" action="#">
-              <Menu.Item>
-                {(active: { active: boolean }) => (
-                  <button
-                    type="submit"
-                    className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "block w-full text-left px-4 py-2 text-sm"
-                    )}
-                  >
-                    Sign out
-                  </button>
-                )}
-              </Menu.Item>
-            </form>
           </div>
         </Menu.Items>
       </Transition>

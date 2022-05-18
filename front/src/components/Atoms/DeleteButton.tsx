@@ -13,8 +13,12 @@ export const DeleteButton: FC<Props> = (props) => {
   const { FuncDestroyTodo } = DestroyTodo();
 
   return (
-    <button onClick={() => FuncDestroyTodo(id)}>
-      <AiOutlineDelete className="w-11 h-8" />
+    <button
+      className="flex m-8 hover:scale-90 duration-200"
+      onClick={() => FuncDestroyTodo(id)}
+    >
+      <AiOutlineDelete className="h-6 w-11 text-sky-400" />
+      <span className="font-mono pl-2">delete</span>
     </button>
   );
 };

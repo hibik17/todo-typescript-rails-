@@ -16,19 +16,22 @@ export const ToggleButton: FC<Props> = (props: Props) => {
   };
 
   return (
-    <Switch
-      checked={is_completed}
-      onChange={toggleAction}
-      className={`${
-        is_completed ? "bg-teal-300" : "bg-red-400"
-      } relative inline-flex h-6 w-11 items-center rounded-full`}
-    >
-      <span className="sr-only">Enable notifications</span>
-      <span
+    <div className="m-8 flex hover:scale-90 duration-200">
+      <Switch
+        checked={is_completed}
+        onChange={toggleAction}
         className={`${
-          is_completed ? "translate-x-6" : "translate-x-1"
-        } inline-block h-4 w-4 transform rounded-full bg-white`}
-      />
-    </Switch>
+          is_completed ? "bg-teal-300" : "bg-red-400"
+        } relative inline-flex h-6 w-11 items-center rounded-full `}
+      >
+        <span className="sr-only">Enable notifications</span>
+        <span
+          className={`${
+            is_completed ? "translate-x-6" : "translate-x-1"
+          } inline-block h-4 w-4 transform rounded-full bg-white`}
+        />
+      </Switch>
+      <span className="font-mono pl-3">status</span>
+    </div>
   );
 };
