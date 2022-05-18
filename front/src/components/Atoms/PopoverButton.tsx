@@ -1,11 +1,18 @@
-import { Fragment } from "react";
+import { FC, Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { AiOutlineFileDone } from "react-icons/ai";
 import { DeleteButton } from "./DeleteButton";
 import { ToggleButton } from "./ToggleButton";
 import { EditModal } from "../Pages/EditModal";
 
-export const PopoverButton = () => {
+type Props = {
+  id: number;
+  is_completed: boolean;
+};
+
+export const PopoverButton: FC<Props> = (props) => {
+  const { id, is_completed } = props;
+
   return (
     <Menu as="div">
       <div>
@@ -27,11 +34,11 @@ export const PopoverButton = () => {
           <div>
             <Menu.Item>
               <div>
-                <DeleteButton id={2} />
+                <DeleteButton id={id} />
               </div>
             </Menu.Item>
             <Menu.Item>
-              <ToggleButton id={2} is_completed={true} />
+              <ToggleButton id={id} is_completed={is_completed} />
             </Menu.Item>
             <Menu.Item>
               <EditModal />

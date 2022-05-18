@@ -15,12 +15,12 @@ export const TodoCard: FC<Props> = (props) => {
   const { FuncFormatDate } = FormatDate();
 
   return (
-    <div className="px-10 my-4 py-6 rounded shadow-xl bg-white w-2/5 mx-10 animate-in slide-in-from-bottom bg-gradient-to-r from-rose-100 to-teal-100 hover:scale-110 duration-300">
+    <div className="px-10 my-4 py-6 rounded shadow-xl bg-white  md:w-2/5 md:mx-10 animate-in slide-in-from-bottom bg-gradient-to-r from-rose-100 to-teal-100 hover:scale-110 duration-300">
       <div className="flex">
         <div className="font-light text-gray-600">
           {FuncFormatDate(new Date(todo.created_at))}
         </div>
-        <PopoverButton />
+        <PopoverButton id={todo.id} is_completed={todo.is_completed} />
       </div>
       <div className="mt-2 truncate">
         <button className="text-2xl text-gray-700 font-bold hover:text-gray-600">

@@ -8,7 +8,6 @@ type Props = {
 
 export const DeleteButton: FC<Props> = (props) => {
   const { id } = props;
-
   // import destroy todo function
   const { FuncDestroyTodo } = DestroyTodo();
 

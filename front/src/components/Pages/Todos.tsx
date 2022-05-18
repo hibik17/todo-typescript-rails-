@@ -32,12 +32,12 @@ export const Todos: FC = memo(() => {
   return (
     <div className="w-full min-h-screen bg-white-100 ">
       <Header />
-      <div className="md:flex w-full h-full">
+      <div className="sm:container sm:mx-3 md:flex md:w-full md:h-full">
         <div className="md:w-1/5 mx-auto mt-10">
           <Sidebar />
         </div>
         <div className="md:w-4/5 mt-10">
-          <div className="container flex flex-wrap justify-items-start">
+          <div className="container sm:w-[80%] sm:mx-auto md:flex md:flex-wrap md:justify-items-start">
             {todos?.map((todo, index) => {
               return <TodoCard key={index} todo={todo} />;
             })}
