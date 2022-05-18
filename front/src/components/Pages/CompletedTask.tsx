@@ -35,7 +35,7 @@ export const CompletedTask = () => {
           <Sidebar />
         </div>
         <div className="md:w-4/5 mt-10">
-          <div className="container">
+          <div className="container flex flex-wrap justify-items-start">
             {todos?.map((todo, index) => {
               return <TodoCard key={index} todo={todo} />;
             })}

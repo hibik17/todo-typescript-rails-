@@ -21,7 +21,7 @@ export const ToggleButton: FC<Props> = (props: Props) => {
       onChange={toggleAction}
       className={`${
         is_completed ? "bg-teal-300" : "bg-red-400"
-      } relative inline-flex h-6 w-11 items-center rounded-full mx-32`}
+      } relative inline-flex h-6 w-11 items-center rounded-full`}
     >
       <span className="sr-only">Enable notifications</span>
       <span
