@@ -1,10 +1,16 @@
+import { FC } from "react";
 import { FiEdit } from "react-icons/fi";
 
-export const EditModal = () => {
+type Props = {
+  id: number;
+};
+
+export const EditModal: FC<Props> = (props) => {
+  console.log(props.id);
   return (
     <button
       type="button"
-      onClick={() => console.log("Edit")}
+      onClick={() => console.log(props.id)}
       className="flex m-8 hover:scale-90 duration-200"
     >
       <FiEdit className="h-6 w-11 text-orange-400" />

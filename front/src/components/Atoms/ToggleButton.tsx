@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { Switch } from "@headlessui/react";
 import { UpdateStatus } from "../hooks/UpdateStatus";
 
@@ -7,13 +7,16 @@ type Props = {
   is_completed: boolean;
 };
 
-export const ToggleButton: FC<Props> = (props: Props) => {
+export const ToggleButton: FC<Props> = (props) => {
   const { id, is_completed } = props;
+
   const { ToggleUpdate } = UpdateStatus();
 
   const toggleAction = () => {
     ToggleUpdate(id);
   };
+
+  console.log(id);
 
   return (
     <div className="m-8 flex hover:scale-90 duration-200">

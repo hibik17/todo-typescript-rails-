@@ -38,10 +38,14 @@ export const PopoverButton: FC<Props> = (props) => {
               </div>
             </Menu.Item>
             <Menu.Item>
-              <ToggleButton id={id} is_completed={is_completed} />
+              <div>
+                <ToggleButton id={id} is_completed={is_completed} />
+              </div>
             </Menu.Item>
             <Menu.Item>
-              <EditModal />
+              <div>
+                <EditModal id={id} />
+              </div>
             </Menu.Item>
           </div>
         </Menu.Items>
