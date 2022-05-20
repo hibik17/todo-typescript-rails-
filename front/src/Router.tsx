@@ -15,7 +15,7 @@ const routes = [
   { path: "/document", element: <Document /> },
   { path: "/todos", element: <Todos /> },
   { path: "*", element: <NotFound /> },
-  { path: "/todo/:id/edit", element: <EditTodo /> },
+  { path: "todos/:id/edit", element: <EditTodo /> },
 ];
 
 export const Router = memo(() => {
