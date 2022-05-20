@@ -5,7 +5,7 @@ type Props = {
   id: number;
 };
 
-export const EditModal: FC<Props> = (props) => {
+export const EditButton: FC<Props> = (props) => {
   console.log(props.id);
   return (
     <button

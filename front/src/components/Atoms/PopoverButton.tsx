@@ -3,7 +3,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { AiOutlineFileDone } from "react-icons/ai";
 import { DeleteButton } from "./DeleteButton";
 import { ToggleButton } from "./ToggleButton";
-import { EditModal } from "../Pages/EditModal";
+import { EditButton } from "./EditButton";
 
 type Props = {
   id: number;
@@ -44,7 +44,7 @@ export const PopoverButton: FC<Props> = (props) => {
             </Menu.Item>
             <Menu.Item>
               <div>
-                <EditModal id={id} />
+                <EditButton id={id} />
               </div>
             </Menu.Item>
           </div>

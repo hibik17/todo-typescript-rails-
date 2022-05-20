@@ -2,6 +2,7 @@ import { FC, memo } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CompletedTask } from "./components/Pages/CompletedTask";
 import { Document } from "./components/Pages/Document";
+import { EditTodo } from "./components/Pages/EditTodo";
 import { NewTodo } from "./components/Pages/NewTodo";
 import { NotFound } from "./components/Pages/NotFound";
 import { TodayTask } from "./components/Pages/TodayTask";
@@ -14,6 +15,7 @@ const routes = [
   { path: "/document", element: <Document /> },
   { path: "/todos", element: <Todos /> },
   { path: "*", element: <NotFound /> },
+  { path: "/todo/:id/edit", element: <EditTodo /> },
 ];
 
 export const Router = memo(() => {
