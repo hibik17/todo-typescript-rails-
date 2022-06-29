@@ -7,7 +7,7 @@ export const NewTodo = memo(() => {
   return (
     <div className="w-full min-h-screen bg-white-100 ">
       <Header />
-      <div className="flex row w-full h-full">
+      <div className="md:flex md:row w-full h-full">
         <div className="w-1/5 mx-auto mt-10">
           <Sidebar />
         </div>

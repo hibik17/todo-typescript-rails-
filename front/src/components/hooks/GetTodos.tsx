@@ -5,9 +5,9 @@ import { TodoType } from "../Types/TodoType";
 export const GetTodos = () => {
   const [todos, setTodos] = useState<Array<TodoType>>([]);
 
-  const getData = useCallback(async () => {
+  const getData = useCallback(async (path: string) => {
     await axios
-      .get<Array<TodoType>>("http://localhost:4000/todos")
+      .get<Array<TodoType>>(`http://localhost:4000/${path}`)
       .then((res) => {
         console.log(res.data);
         setTodos(res.data);
